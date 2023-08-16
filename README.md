@@ -95,7 +95,7 @@ spring.datasource.password=anima-01
 6. 빌드 결과물은 ```target```폴더 내에 .jar파일로 작성됨.
 7. ```java -jar [파일명].jar```명령어로 서버실행.
 8. 사용가능한 엔드포인트 등은 아래에 후술될 것임.
-
+9. ex) test 가능한 request등을 http 폴더 내에 작성해둠.
 
 ### 데이터베이스 테이블 구조
 ![스크린샷 2023-08-16 오후 7 08 53](https://github.com/naht94/wanted-pre-onboarding-backend/assets/126442625/d747c010-a931-4889-8212-63418b537679)
