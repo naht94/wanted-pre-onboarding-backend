@@ -63,6 +63,39 @@
 ### 지원자 성명 : 권형택
 
 ### 애플리케이션 실행방법
+1. ```git clone - https://github.com/naht94/wanted-pre-onboarding-backend.git```
+ 
+2. ```/src/main/resources``` 경로에 application.properties 파일 생성
+
+```properties
+jwt.secret=VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa
+jwt.accessTokenExpires=86400000
+jwt.refreshTokenExpires=86400000
+
+server.port=9090
+spring.profiles.active=prod
+spring.jpa.open-in-view=false
+```
+
+3. ```/src/main/resources``` 경로에 application-prod.properties 파일 생성
+```properties
+spring.jpa.generate-ddl=true
+spring.jpa.show-sql=true
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://andb.cyfnanmsxs7l.us-east-2.rds.amazonaws.com:3306/userboard
+
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+spring.datasource.username=root
+spring.datasource.password=anima-01
+```
+4. 우상단 ```MAVEN``` 클릭 ```projrct명``` 클릭 ```package``` 실행
+5. 실행 되지 않을 경우 ```Build``` ```Rebuild Project``` 후 4번과정 반복
+6. 빌드 결과물은 ```target```폴더 내에 .jar파일로 작성됨.
+7. ```java -jar [파일명].jar```명령어로 서버실행.
+8. 사용가능한 엔드포인트 등은 아래에 후술될 것임.
+
 
 ### 데이터베이스 테이블 구조
 ![스크린샷 2023-08-16 오후 7 08 53](https://github.com/naht94/wanted-pre-onboarding-backend/assets/126442625/d747c010-a931-4889-8212-63418b537679)
