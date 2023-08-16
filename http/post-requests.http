@@ -1,0 +1,45 @@
+### 게시글 작성
+POST http://localhost:9090/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxQGxvbC5jb20iLCJhdXRoIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjkyMjY1NTE0fQ.E6Bu3jcKmF9BI5RPehK06nmyv6WCMbMTYWxdBy5aAfQ
+
+{
+  "title":"제목1231111",
+  "contents":"작성글1231111"
+}
+
+### 게시글 조회
+GET http://localhost:9090/api/posts/1
+
+### 게시글 조회 페이지
+GET http://localhost:9090/api/posts?page=0
+
+### 게시글 수정 당사자 아님
+PUT http://localhost:9090/api/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyQGxvbC5jb20iLCJhdXRoIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjkyMjY1NTc1fQ.7NDBOqKLVLRRr8_nYVqUyQZauBaxfbi0LC7ypCUYlAs
+
+{
+  "title":"잘못됨",
+  "contents":"작성 잘못됨"
+}
+
+### 당사자가 아님
+DELETE http://localhost:9090/api/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyQGxvbC5jb20iLCJhdXRoIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjkyMjY1NTc1fQ.7NDBOqKLVLRRr8_nYVqUyQZauBaxfbi0LC7ypCUYlAs
+
+### 게시글 수정
+PUT http://localhost:9090/api/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxQGxvbC5jb20iLCJhdXRoIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjkyMjY1NjIyfQ.LYaFJlpQmiNLsyFBi6HF5vSJXcq3lx95ffyElrMczDg
+
+{
+  "title":"제목2",
+  "contents":"작성글2"
+}
+
+### 당사자 맞음
+DELETE http://localhost:9090/api/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxQGxvbC5jb20iLCJhdXRoIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjkyMjY1NjIyfQ.LYaFJlpQmiNLsyFBi6HF5vSJXcq3lx95ffyElrMczDg
